@@ -3,458 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jay Gurudev Enterprises & Construction | Construction & Machinery Services</title>
-  
-  <!-- Bootstrap 5 CSS -->
+  <title>Jay Gurudev Enterprises & Construction</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .bg-navy { background-color: #0d1b2a; }
+    .hero-section {
+      min-height: 80vh;
+      background: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.85)), url('images/house.jpg') center/cover no-repeat;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Announcement / Contact Bar -->
-  <div class="top-bar bg-navy text-white py-2 fs-7 d-none d-lg-block">
+  <!-- Top Bar -->
+  <div class="bg-navy text-white py-2 fs-7">
     <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-4">
-        <span><i class="fa-solid fa-location-dot text-warning me-2"></i>Plot-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon - 425201</span>
-        <span><i class="fa-solid fa-clock text-warning me-2"></i>Mon - Sat: 9:00 AM - 8:00 PM</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <a href="tel:+917798381919" class="text-white text-decoration-none"><i class="fa-solid fa-phone text-warning me-1"></i> +91 77983 81919</a>
-        <span class="text-secondary">|</span>
-        <a href="tel:+919420382828" class="text-white text-decoration-none"><i class="fa-solid fa-mobile-screen text-warning me-1"></i> +91 94203 82828</a>
-      </div>
+      <div><i class="fa-solid fa-location-dot text-warning me-2"></i>Plot-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon - 425201</div>
+      <div><i class="fa-solid fa-phone text-warning me-1"></i> +91 77983 81919 | +91 94203 82828</div>
     </div>
   </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <div class="logo-icon bg-warning text-dark rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
-          <i class="fa-solid fa-hard-hat fa-lg"></i>
-        </div>
-        <div>
-          <span class="fw-bold text-navy fs-4 d-block lh-1">JAY GURUDEV</span>
-          <small class="text-muted text-uppercase letter-spacing-1 fs-8 fw-semibold">Enterprises & Construction</small>
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto me-3 fw-medium">
-          <li class="nav-item"><a class="nav-link active text-navy" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#machinery">Equipment Rental</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-warning fw-bold px-4 py-2 rounded-pill text-dark shadow-sm">Get Free Estimate</a>
-      </div>
+      <a class="navbar-brand fw-bold text-navy" href="#">JAY GURUDEV ENTERPRISES & CONSTRUCTION</a>
+      <a href="tel:+917798381919" class="btn btn-warning fw-bold rounded-pill">Call Now</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header id="home" class="hero-section d-flex align-items-center position-relative text-white">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative z-index-2 py-5">
-      <div class="row align-items-center">
-        <div class="col-lg-8" data-aos="fade-right">
-          <span class="badge bg-warning text-dark uppercase px-3 py-2 mb-3 fw-bold tracking-wide">Registered Civil Engineering & Equipment Services</span>
-          <h1 class="display-4 fw-bold mb-3">Building Solid Foundations For Your Dream Spaces</h1>
-          <p class="lead mb-4 opacity-90">Specializing in architectural planning, turnkey bungalow construction, heavy JCB machinery rentals, and premium aggregate material supply across Jalgaon District.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#services" class="btn btn-warning btn-lg fw-bold px-4 text-dark">Our Services</a>
-            <a href="#contact" class="btn btn-outline-light btn-lg fw-bold px-4">Contact Us</a>
-          </div>
-        </div>
-      </div>
+  <!-- Hero Banner -->
+  <header class="hero-section text-white d-flex align-items-center py-5">
+    <div class="container">
+      <span class="badge bg-warning text-dark px-3 py-2 mb-3">Registered Civil Engineering Services</span>
+      <h1 class="display-4 fw-bold">Building Solid Foundations For Your Dream Spaces</h1>
+      <p class="lead">Architectural planning, bungalow construction, JCB machinery rentals, and material supply.</p>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container py-4">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="position-relative">
-            <img src="IMG-20260723-WA0016.jpg" alt="Jay Gurudev Modern Bungalow Construction" class="img-fluid rounded-4 shadow-lg w-100">
-            <div class="bg-navy text-white p-3 rounded-3 position-absolute bottom-0 start-0 m-3 shadow d-none d-sm-block">
-              <h5 class="mb-0 text-warning fw-bold">100+ Projects</h5>
-              <small class="text-white-50">Successfully Delivered</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <h6 class="text-warning fw-bold text-uppercase tracking-wider">About Our Firm</h6>
-          <h2 class="fw-bold text-navy mb-3">Delivering Architectural Excellence & Engineering Precision</h2>
-          <p class="text-muted">Jay Gurudev Enterprises & Construction is a trusted civil engineering and construction firm dedicated to high-quality bungalow construction, structural planning, and heavy earthmoving machinery services.</p>
-          <p class="text-muted">Whether you need 2D Vastu compliant layout plans, 3D modern elevations, or heavy JCB equipment for site excavation and tractor supply for construction materials, we offer complete end-to-end solutions under one roof.</p>
-          
-          <div class="row g-3 mt-2">
-            <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">Turnkey Construction</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">2D & 3D Vastu Plans</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">JCB Machinery Rental</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">Material & Sand Supply</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Core Services Section -->
-  <section id="services" class="py-5">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
-        <h6 class="text-warning fw-bold text-uppercase">What We Offer</h6>
-        <h2 class="fw-bold text-navy">Comprehensive Civil & Machinery Solutions</h2>
-        <p class="text-muted">From concept planning to earthworks and structural completion, we provide turnkey services tailored to your exact requirements.</p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Service 1 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card h-100 border-0 shadow-sm rounded-4 service-card p-4">
-            <div class="icon-wrapper bg-warning bg-opacity-10 text-dark rounded-3 p-3 d-inline-block mb-3">
-              <i class="fa-solid fa-compass-drafting fa-2x"></i>
-            </div>
-            <h4 class="fw-bold text-navy h5">2D Vastu & 3D Elevations</h4>
-            <p class="text-muted fs-7">Custom architectural layouts, structural design, and modern 3D front elevations compliant with Vastu principles.</p>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card h-100 border-0 shadow-sm rounded-4 service-card p-4">
-            <div class="icon-wrapper bg-warning bg-opacity-10 text-dark rounded-3 p-3 d-inline-block mb-3">
-              <i class="fa-solid fa-house-chimney-crack fa-2x"></i>
-            </div>
-            <h4 class="fw-bold text-navy h5">Turnkey Bungalow Construction</h4>
-            <p class="text-muted fs-7">Complete residential building construction managed from foundation laying to final interior finishing.</p>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card h-100 border-0 shadow-sm rounded-4 service-card p-4">
-            <div class="icon-wrapper bg-warning bg-opacity-10 text-dark rounded-3 p-3 d-inline-block mb-3">
-              <i class="fa-solid fa-truck-monster fa-2x"></i>
-            </div>
-            <h4 class="fw-bold text-navy h5">JCB Machinery Services</h4>
-            <p class="text-muted fs-7">Heavy-duty JCB earthmovers available for site clearing, trenching, foundation excavation, and road work.</p>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card h-100 border-0 shadow-sm rounded-4 service-card p-4">
-            <div class="icon-wrapper bg-warning bg-opacity-10 text-dark rounded-3 p-3 d-inline-block mb-3">
-              <i class="fa-solid fa-tractor fa-2x"></i>
-            </div>
-            <h4 class="fw-bold text-navy h5">Tractor & Aggregate Supply</h4>
-            <p class="text-muted fs-7">Reliable site logistics using Swaraj tractors for bulk sand, crushed stone, gravel, and earth transport.</p>
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="card h-100 border-0 shadow-sm rounded-4 service-card p-4">
-            <div class="icon-wrapper bg-warning bg-opacity-10 text-dark rounded-3 p-3 d-inline-block mb-3">
-              <i class="fa-solid fa-layer-group fa-2x"></i>
-            </div>
-            <h4 class="fw-bold text-navy h5">RCC Structural Engineering</h4>
-            <p class="text-muted fs-7">Engineered RCC column framing, beam detailing, slab reinforcement, and load analysis for ultimate durability.</p>
-          </div>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="card h-100 border-0 shadow-sm rounded-4 service-card p-4">
-            <div class="icon-wrapper bg-warning bg-opacity-10 text-dark rounded-3 p-3 d-inline-block mb-3">
-              <i class="fa-solid fa-couch fa-2x"></i>
-            </div>
-            <h4 class="fw-bold text-navy h5">Modular Kitchens & Interiors</h4>
-            <p class="text-muted fs-7">Premium interior design solutions including modular kitchens, false ceiling lighting, and custom woodwork.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Heavy Fleet & Equipment Showcase -->
-  <section id="machinery" class="py-5 bg-navy text-white">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
-        <h6 class="text-warning fw-bold text-uppercase">Machinery & Logistics Fleet</h6>
-        <h2 class="fw-bold">Heavy Machinery & Material Logistics</h2>
-        <p class="text-light opacity-75">Equipped with reliable heavy machinery available on hourly and project-based rental contracts.</p>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-        <!-- Machinery 1: JCB -->
-        <div class="col-md-6 col-lg-5" data-aos="fade-right">
-          <div class="bg-navy-light p-3 rounded-4 border border-secondary shadow h-100">
-            <div class="overflow-hidden rounded-3 mb-3" style="height: 250px;">
-              <img src="IMG-20260723-WA0014.jpg" alt="JCB Excavator Heavy Equipment" class="w-100 h-100 object-fit-cover">
-            </div>
-            <h4 class="fw-bold text-warning mb-2">JCB Excavator & Backhoe Loader</h4>
-            <ul class="list-unstyled fs-7 text-light opacity-90 mb-3">
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Plot Leveling & Earthwork Digging</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Foundation Trench Excavation</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Debris Removal & Material Handling</li>
-            </ul>
-            <a href="tel:+917798381919" class="btn btn-warning btn-sm fw-bold w-100">Hire JCB Operator</a>
-          </div>
-        </div>
-
-        <!-- Machinery 2: Tractor -->
-        <div class="col-md-6 col-lg-5" data-aos="fade-left">
-          <div class="bg-navy-light p-3 rounded-4 border border-secondary shadow h-100">
-            <div class="overflow-hidden rounded-3 mb-3" style="height: 250px;">
-              <img src="IMG-20260723-WA0015.jpg" alt="Swaraj Heavy Duty Tractor" class="w-100 h-100 object-fit-cover">
-            </div>
-            <h4 class="fw-bold text-warning mb-2">Swaraj 744 FE Material Transporter</h4>
-            <ul class="list-unstyled fs-7 text-light opacity-90 mb-3">
-              <li><i class="fa-solid fa-check text-warning me-2"></i>River Sand & Metal Crushed Aggregate Supply</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>On-Site Material Haulage & Dumping</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Heavy Load Agricultural & Construction Logistics</li>
-            </ul>
-            <a href="tel:+919420382828" class="btn btn-warning btn-sm fw-bold w-100">Order Aggregate Transport</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-5 bg-light">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
-        <h6 class="text-warning fw-bold text-uppercase">Our Portfolio</h6>
-        <h2 class="fw-bold text-navy">Featured Construction Projects</h2>
-        <p class="text-muted">Take a look at our recent residential bungalow projects and technical site operations.</p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Item 1: Modern Villa Design -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="portfolio-card position-relative overflow-hidden rounded-4 shadow-sm">
-            <img src="IMG-20260723-WA0016.jpg" alt="Modern Bungalow Construction Project" class="w-100 h-100">
-            <div class="portfolio-overlay d-flex flex-column justify-content-end p-4 text-white">
-              <span class="badge bg-warning text-dark w-auto align-self-start mb-2">Modern Villa</span>
-              <h5 class="fw-bold mb-1">Hirodkar's Residence</h5>
-              <p class="fs-8 text-white-50 mb-0">3D Elevation & Construction Execution</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 2: Heavy Earthworks -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="portfolio-card position-relative overflow-hidden rounded-4 shadow-sm">
-            <img src="IMG-20260723-WA0014.jpg" alt="JCB Site Clearing Operation" class="w-100 h-100">
-            <div class="portfolio-overlay d-flex flex-column justify-content-end p-4 text-white">
-              <span class="badge bg-warning text-dark w-auto align-self-start mb-2">Earthworks</span>
-              <h5 class="fw-bold mb-1">Site Trenching & Clearing</h5>
-              <p class="fs-8 text-white-50 mb-0">JCB Machinery Operations</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 3: Material Logistics -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-          <div class="portfolio-card position-relative overflow-hidden rounded-4 shadow-sm">
-            <img src="IMG-20260723-WA0015.jpg" alt="Material Supply Logistics" class="w-100 h-100">
-            <div class="portfolio-overlay d-flex flex-column justify-content-end p-4 text-white">
-              <span class="badge bg-warning text-dark w-auto align-self-start mb-2">Logistics</span>
-              <h5 class="fw-bold mb-1">Raw Material Transportation</h5>
-              <p class="fs-8 text-white-50 mb-0">Sand & Aggregate Delivery</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Location Section -->
-  <section id="contact" class="py-5">
-    <div class="container py-4">
-      <div class="row g-5">
-        <!-- Contact Details -->
-        <div class="col-lg-5" data-aos="fade-right">
-          <h6 class="text-warning fw-bold text-uppercase">Get In Touch</h6>
-          <h2 class="fw-bold text-navy mb-4">Let's Discuss Your Dream Project</h2>
-          <p class="text-muted mb-4">Reach out to us for engineering consultation, construction quotes, or machinery rental bookings.</p>
-
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-              <i class="fa-solid fa-location-dot fs-5"></i>
-            </div>
-            <div>
-              <h6 class="fw-bold text-navy mb-1">Office Address</h6>
-              <p class="text-muted mb-0 fs-7">Plot.-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon, Maharashtra-425201</p>
-            </div>
-          </div>
-
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-              <i class="fa-solid fa-phone fs-5"></i>
-            </div>
-            <div>
-              <h6 class="fw-bold text-navy mb-1">Phone Numbers</h6>
-              <p class="text-muted mb-0 fs-7">
-                <a href="tel:+917798381919" class="text-decoration-none text-muted">+91 77983 81919</a> / 
-                <a href="tel:+919420382828" class="text-decoration-none text-muted">+91 94203 82828</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="d-flex align-items-start gap-3 mb-4">
-            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-              <i class="fa-solid fa-clock fs-5"></i>
-            </div>
-            <div>
-              <h6 class="fw-bold text-navy mb-1">Working Hours</h6>
-              <p class="text-muted mb-0 fs-7">Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: On-Site Appointment Only</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="col-lg-7" data-aos="fade-left">
-          <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
-            <h4 class="fw-bold text-navy mb-4">Send Us A Message</h4>
-            <form id="contactForm">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label fw-medium text-navy">Your Name</label>
-                  <input type="text" class="form-control form-control-lg fs-7" placeholder="e.g. Rahul Patil" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label fw-medium text-navy">Phone Number</label>
-                  <input type="tel" class="form-control form-control-lg fs-7" placeholder="e.g. 9823000000" required>
-                </div>
-                <div class="col-md-12">
-                  <label class="form-label fw-medium text-navy">Service Required</label>
-                  <select class="form-select form-select-lg fs-7" required>
-                    <option value="" selected disabled>Select a Service</option>
-                    <option>Turnkey Bungalow Construction</option>
-                    <option>2D/3D Architectural Planning</option>
-                    <option>JCB Machinery Rental</option>
-                    <option>Sand & Aggregate Material Supply</option>
-                  </select>
-                </div>
-                <div class="col-md-12">
-                  <label class="form-label fw-medium text-navy">Message Details</label>
-                  <textarea class="form-control form-control-lg fs-7" rows="4" placeholder="Tell us about your plot size, location, or requirements..." required></textarea>
-                </div>
-                <div class="col-md-12">
-                  <button type="submit" class="btn btn-warning btn-lg fw-bold w-100 text-dark">Submit Request</button>
-                </div>
-              </div>
-            </form>
-            <div id="formSuccess" class="alert alert-success mt-3 d-none" role="alert">
-              Thank you! Your message has been sent successfully. We will call you back shortly.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-navy text-white pt-5 pb-3 border-top border-secondary">
+  <section class="py-5 bg-light">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4">
-          <div class="d-flex align-items-center mb-3">
-            <div class="logo-icon bg-warning text-dark rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-              <i class="fa-solid fa-hard-hat"></i>
-            </div>
-            <span class="fw-bold fs-4 text-white">JAY GURUDEV</span>
-          </div>
-          <p class="fs-7 text-light opacity-75">Registered civil engineering firm delivering architectural planning, bungalow construction, machinery rentals, and material logistics across Bhusawal and Jalgaon district.</p>
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <img src="images/house.jpg" class="img-fluid rounded-4 shadow" alt="House Project">
         </div>
-
-        <div class="col-md-4 col-lg-3">
-          <h6 class="text-warning fw-bold mb-3">Quick Navigation</h6>
-          <ul class="list-unstyled fs-7 d-flex flex-column gap-2">
-            <li><a href="#home" class="text-light opacity-75 text-decoration-none">Home</a></li>
-            <li><a href="#about" class="text-light opacity-75 text-decoration-none">About Us</a></li>
-            <li><a href="#services" class="text-light opacity-75 text-decoration-none">Our Services</a></li>
-            <li><a href="#machinery" class="text-light opacity-75 text-decoration-none">Machinery Hire</a></li>
-            <li><a href="#contact" class="text-light opacity-75 text-decoration-none">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4 col-lg-2">
-          <h6 class="text-warning fw-bold mb-3">Core Services</h6>
-          <ul class="list-unstyled fs-7 d-flex flex-column gap-2 text-light opacity-75">
-            <li>2D & 3D Vastu Plans</li>
-            <li>Bungalow Construction</li>
-            <li>JCB Excavation</li>
-            <li>Tractor Material Supply</li>
-          </ul>
-        </div>
-
-        <div class="col-md-4 col-lg-3">
-          <h6 class="text-warning fw-bold mb-3">Service Reach</h6>
-          <p class="fs-7 text-light opacity-75">Bhusawal • Jalgaon City • Varangaon • Yawal • Raver • Jamner • Bodwad & Neighboring Areas.</p>
-        </div>
-      </div>
-
-      <hr class="border-secondary">
-      
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center fs-8 text-light opacity-75 pt-2">
-        <p class="mb-2 mb-md-0">&copy; <span id="currentYear"></span> Jay Gurudev Enterprises & Construction. All Rights Reserved.</p>
-        <div>
-          <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
-          <a href="#" class="text-light text-decoration-none">Terms & Conditions</a>
+        <div class="col-md-6">
+          <h6 class="text-warning fw-bold text-uppercase">About Us</h6>
+          <h2 class="fw-bold">Delivering Architectural Excellence & Engineering Precision</h2>
+          <p class="text-muted">Specializing in 2D Vastu plans, 3D front elevations, turnkey bungalow construction, and equipment logistics across Jalgaon District.</p>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Floating Contact Buttons -->
-  <div class="quick-actions">
-    <a href="https://wa.me/917798381919" target="_blank" class="btn-floating whatsapp" title="Chat on WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <a href="tel:+917798381919" class="btn-floating phone" title="Call Us Now">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-  </div>
+  <!-- Machinery Fleet -->
+  <section class="py-5 bg-navy text-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 text-warning">Machinery & Heavy Equipment</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="border border-secondary p-3 rounded-4 bg-dark">
+            <img src="images/jcb.jpg" class="img-fluid rounded mb-3" style="max-height: 250px; object-fit: cover;" alt="JCB Equipment">
+            <h4>JCB Earthmover Excavator</h4>
+            <p class="text-white-50">Plot leveling, foundation excavation, and site clearing.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="border border-secondary p-3 rounded-4 bg-dark">
+            <img src="images/tractor.jpg" class="img-fluid rounded mb-3" style="max-height: 250px; object-fit: cover;" alt="Tractor Material Supply">
+            <h4>Swaraj Aggregate Transporter</h4>
+            <p class="text-white-50">Sand, crushed aggregate metal, and soil logistics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- Portfolio -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Our Work Gallery</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><img src="images/house.jpg" class="img-fluid rounded-4 shadow" alt="Villa"></div>
+        <div class="col-md-4"><img src="images/jcb.jpg" class="img-fluid rounded-4 shadow" alt="JCB Work"></div>
+        <div class="col-md-4"><img src="images/tractor.jpg" class="img-fluid rounded-4 shadow" alt="Material Transport"></div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
