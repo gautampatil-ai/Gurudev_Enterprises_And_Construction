@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jay Gurudev Enterprises & Construction | Construction & Machinery Services</title>
+  <title>Jay Gurudev Enterprises & Construction | Jalgaon</title>
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,23 +11,91 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    body { font-family: 'Poppins', sans-serif; color: #333; }
+    .bg-navy { background-color: #0d1b2a; }
+    .text-navy { color: #0d1b2a; }
+    .bg-navy-light { background-color: #1b263b; }
+    
+    .hero-section {
+      min-height: 85vh;
+      background: linear-gradient(rgba(13, 27, 42, 0.82), rgba(13, 27, 42, 0.82)), url('images/house.jpg') center/cover no-repeat;
+    }
+    
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12) !important;
+    }
+    
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 280px;
+    }
+    .portfolio-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .portfolio-card:hover img {
+      transform: scale(1.08);
+    }
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13, 27, 42, 0.95), rgba(13, 27, 42, 0.2));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: #fff;
+    }
+
+    /* Floating Action Buttons */
+    .quick-actions {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-floating {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .btn-floating:hover { transform: scale(1.1); color: white; }
+    .btn-floating.whatsapp { background-color: #25D366; }
+    .btn-floating.phone { background-color: #0d1b2a; }
+  </style>
 </head>
 <body>
 
-  <!-- Top Announcement / Contact Bar -->
-  <div class="top-bar bg-navy text-white py-2 fs-7 d-none d-lg-block">
+  <!-- Top Announcement Bar -->
+  <div class="bg-navy text-white py-2 fs-7 d-none d-lg-block">
     <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-4">
-        <span><i class="fa-solid fa-location-dot text-warning me-2"></i>Plot.-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon, Maharashtra-425201</span>
-        <span><i class="fa-solid fa-clock text-warning me-2"></i>Mon - Sat: 9:00 AM - 8:00 PM</span>
+      <div>
+        <i class="fa-solid fa-location-dot text-warning me-2"></i> Plot-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon - 425201
       </div>
-      <div class="d-flex align-items-center gap-3">
-        <a href="tel:+917798381919" class="text-white text-decoration-none"><i class="fa-solid fa-phone text-warning me-1"></i> +91 77983 81919</a>
-        <span class="text-secondary">|</span>
+      <div>
+        <a href="tel:+917798381919" class="text-white text-decoration-none me-3"><i class="fa-solid fa-phone text-warning me-1"></i> +91 77983 81919</a>
         <a href="tel:+919420382828" class="text-white text-decoration-none"><i class="fa-solid fa-mobile-screen text-warning me-1"></i> +91 94203 82828</a>
       </div>
     </div>
@@ -36,13 +104,13 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <div class="logo-icon bg-warning text-dark rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <div class="bg-warning text-dark rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
           <i class="fa-solid fa-hard-hat fa-lg"></i>
         </div>
         <div>
-          <span class="fw-bold text-navy fs-4 d-block lh-1">JAY GURUDEV</span>
-          <small class="text-muted text-uppercase letter-spacing-1 fs-8 fw-semibold">Enterprises & Construction</small>
+          <span class="fw-bold text-navy fs-5 d-block lh-1">JAY GURUDEV</span>
+          <small class="text-muted text-uppercase fs-8 fw-semibold">Enterprises & Construction</small>
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -50,22 +118,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto me-3 fw-medium">
-          <li class="nav-item"><a class="nav-link active text-navy" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#machinery">Equipment Rental</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-navy" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-navy" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-navy" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-navy" href="#machinery">Equipment Rental</a></li>
+          <li class="nav-item"><a class="nav-link text-navy" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link text-navy" href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="btn btn-warning fw-bold px-4 py-2 rounded-pill text-dark shadow-sm">Get Free Estimate</a>
+        <a href="#contact" class="btn btn-warning fw-bold px-4 rounded-pill text-dark shadow-sm">Get Free Estimate</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header id="home" class="hero-section d-flex align-items-center position-relative text-white">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative z-index-2 py-5">
+  <header id="home" class="hero-section text-white d-flex align-items-center py-5">
+    <div class="container py-4">
       <div class="row align-items-center">
         <div class="col-lg-8">
           <span class="badge bg-warning text-dark text-uppercase px-3 py-2 mb-3 fw-bold">Registered Civil Engineering & Equipment Services</span>
@@ -86,10 +153,8 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <div class="position-relative">
-            <div class="img-frame rounded-4 overflow-hidden shadow-lg" style="height: 380px;">
-              <img src="assets/images/house.jpg" alt="Jay Gurudev Modern Bungalow Construction" class="w-100 h-100 object-fit-cover">
-            </div>
-            <div class="bg-navy text-white p-3 rounded-3 position-absolute bottom-0 start-0 m-3 shadow d-none d-sm-block z-index-2">
+            <img src="images/house.jpg" alt="Jay Gurudev Modern Bungalow Construction" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 400px; object-fit: cover;">
+            <div class="bg-navy text-white p-3 rounded-3 position-absolute bottom-0 start-0 m-3 shadow d-none d-sm-block">
               <h5 class="mb-0 text-warning fw-bold">100+ Projects</h5>
               <small class="text-white-50">Successfully Delivered</small>
             </div>
@@ -98,33 +163,21 @@
         <div class="col-lg-6">
           <h6 class="text-warning fw-bold text-uppercase">About Our Firm</h6>
           <h2 class="fw-bold text-navy mb-3">Delivering Architectural Excellence & Engineering Precision</h2>
-          <p class="text-muted">Jay Gurudev Enterprises & Construction is a trusted civil engineering and construction firm dedicated to high-quality bungalow construction, structural planning, and heavy earthmoving machinery services.</p>
-          <p class="text-muted">Whether you need 2D Vastu compliant layout plans, 3D modern elevations, heavy JCB equipment for site excavation, or tractor supply for construction materials, we offer complete end-to-end solutions under one roof.</p>
+          <p class="text-muted">Jay Gurudev Enterprises & Construction is a trusted civil engineering and construction firm dedicated to high-quality residential building, structural planning, and heavy earthmoving machinery services.</p>
+          <p class="text-muted">Whether you need 2D Vastu compliant layout plans, 3D modern elevations, heavy JCB equipment for site excavation, or tractor supply for raw materials, we deliver end-to-end reliability.</p>
           
           <div class="row g-3 mt-2">
             <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">Turnkey Construction</span>
-              </div>
+              <i class="fa-solid fa-circle-check text-warning me-2"></i><span class="fw-semibold text-navy">Turnkey Construction</span>
             </div>
             <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">2D & 3D Vastu Plans</span>
-              </div>
+              <i class="fa-solid fa-circle-check text-warning me-2"></i><span class="fw-semibold text-navy">2D & 3D Vastu Plans</span>
             </div>
             <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">JCB Machinery Rental</span>
-              </div>
+              <i class="fa-solid fa-circle-check text-warning me-2"></i><span class="fw-semibold text-navy">JCB Equipment Rental</span>
             </div>
             <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
-                <span class="fw-semibold text-navy">Material & Sand Supply</span>
-              </div>
+              <i class="fa-solid fa-circle-check text-warning me-2"></i><span class="fw-semibold text-navy">Sand & Aggregate Supply</span>
             </div>
           </div>
         </div>
@@ -132,93 +185,142 @@
     </div>
   </section>
 
-  <!-- Heavy Fleet & Equipment Showcase -->
-  <section id="machinery" class="py-5 bg-navy text-white">
+  <!-- Services Section -->
+  <section id="services" class="py-5">
     <div class="container py-4">
       <div class="text-center max-w-700 mx-auto mb-5">
-        <h6 class="text-warning fw-bold text-uppercase">Machinery & Logistics Fleet</h6>
-        <h2 class="fw-bold">Heavy Machinery & Material Logistics</h2>
-        <p class="text-light opacity-75">Equipped with reliable heavy machinery available on hourly and project-based rental contracts.</p>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-        <!-- Machinery 1: JCB -->
-        <div class="col-md-6 col-lg-5">
-          <div class="bg-navy-light p-3 rounded-4 border border-secondary shadow h-100">
-            <div class="overflow-hidden rounded-3 mb-3 bg-white d-flex align-items-center justify-content-center" style="height: 250px;">
-              <img src="assets/images/jcb.jpg" alt="JCB Excavator Heavy Equipment" class="w-100 h-100 object-fit-contain">
-            </div>
-            <h4 class="fw-bold text-warning mb-2">JCB Excavator & Backhoe Loader</h4>
-            <ul class="list-unstyled fs-7 text-light opacity-90 mb-3">
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Plot Leveling & Earthwork Digging</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Foundation Trench Excavation</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Debris Removal & Material Handling</li>
-            </ul>
-            <a href="tel:+917798381919" class="btn btn-warning btn-sm fw-bold w-100">Hire JCB Operator</a>
-          </div>
-        </div>
-
-        <!-- Machinery 2: Tractor -->
-        <div class="col-md-6 col-lg-5">
-          <div class="bg-navy-light p-3 rounded-4 border border-secondary shadow h-100">
-            <div class="overflow-hidden rounded-3 mb-3 bg-white d-flex align-items-center justify-content-center" style="height: 250px;">
-              <img src="assets/images/tractor.jpg" alt="Swaraj Heavy Duty Tractor" class="w-100 h-100 object-fit-contain">
-            </div>
-            <h4 class="fw-bold text-warning mb-2">Swaraj 744 FE Material Transporter</h4>
-            <ul class="list-unstyled fs-7 text-light opacity-90 mb-3">
-              <li><i class="fa-solid fa-check text-warning me-2"></i>River Sand & Metal Crushed Aggregate Supply</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>On-Site Material Haulage & Dumping</li>
-              <li><i class="fa-solid fa-check text-warning me-2"></i>Heavy Load Agricultural & Construction Logistics</li>
-            </ul>
-            <a href="tel:+919420382828" class="btn btn-warning btn-sm fw-bold w-100">Order Aggregate Transport</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-5 bg-light">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <h6 class="text-warning fw-bold text-uppercase">Our Portfolio</h6>
-        <h2 class="fw-bold text-navy">Featured Construction Projects</h2>
-        <p class="text-muted">Take a look at our recent residential bungalow projects and technical site operations.</p>
+        <h6 class="text-warning fw-bold text-uppercase">What We Offer</h6>
+        <h2 class="fw-bold text-navy">Comprehensive Civil & Construction Services</h2>
       </div>
 
       <div class="row g-4">
-        <!-- Item 1: Modern Villa Design -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-4 rounded-4 service-card text-center">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <i class="fa-solid fa-compass fa-xl"></i>
+            </div>
+            <h5 class="fw-bold text-navy mb-2">2D & 3D Planning</h5>
+            <p class="text-muted fs-7">Vastu-compliant architectural plans, structural engineering designs, and 3D elevations.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-4 rounded-4 service-card text-center">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <i class="fa-solid fa-house-chimney fa-xl"></i>
+            </div>
+            <h5 class="fw-bold text-navy mb-2">Bungalow Construction</h5>
+            <p class="text-muted fs-7">Complete turnkey residential construction with high-grade material quality control.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-4 rounded-4 service-card text-center">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <i class="fa-solid fa-truck-monster fa-xl"></i>
+            </div>
+            <h5 class="fw-bold text-navy mb-2">Heavy Equipment Rental</h5>
+            <p class="text-muted fs-7">JCB backhoe loaders and excavators available for plot leveling and trenching.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-4 rounded-4 service-card text-center">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+              <i class="fa-solid fa-truck-ramp-box fa-xl"></i>
+            </div>
+            <h5 class="fw-bold text-navy mb-2">Material Supply</h5>
+            <p class="text-muted fs-7">Timely delivery of river sand, crushed metal stone, and soil via Swaraj tractor fleet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Machinery & Fleet Section -->
+  <section id="machinery" class="py-5 bg-navy text-white">
+    <div class="container py-4">
+      <div class="text-center mx-auto mb-5">
+        <h6 class="text-warning fw-bold text-uppercase">Machinery & Logistics Fleet</h6>
+        <h2 class="fw-bold">Heavy Machinery & Material Logistics</h2>
+        <p class="text-light opacity-75">Available on hourly, daily, or project-contract basis.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Machinery Card 1 -->
+        <div class="col-md-6 col-lg-5">
+          <div class="bg-navy-light p-4 rounded-4 border border-secondary shadow h-100">
+            <div class="rounded-3 mb-3 bg-white overflow-hidden d-flex align-items-center justify-content-center" style="height: 220px;">
+              <img src="images/jcb.jpg" alt="JCB Earthmover" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <h4 class="fw-bold text-warning mb-2">JCB Excavator & Backhoe Loader</h4>
+            <ul class="list-unstyled text-light opacity-90 mb-4 fs-7">
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i> Plot Leveling & Earthwork Digging</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i> Foundation Trench Excavation</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i> Debris Removal & Material Handling</li>
+            </ul>
+            <a href="tel:+917798381919" class="btn btn-warning fw-bold w-100 text-dark">Hire JCB Operator</a>
+          </div>
+        </div>
+
+        <!-- Machinery Card 2 -->
+        <div class="col-md-6 col-lg-5">
+          <div class="bg-navy-light p-4 rounded-4 border border-secondary shadow h-100">
+            <div class="rounded-3 mb-3 bg-white overflow-hidden d-flex align-items-center justify-content-center" style="height: 220px;">
+              <img src="images/tractor.jpg" alt="Swaraj Tractor Transporter" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <h4 class="fw-bold text-warning mb-2">Swaraj 744 FE Material Transporter</h4>
+            <ul class="list-unstyled text-light opacity-90 mb-4 fs-7">
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i> Sand & Metal Crushed Aggregate Supply</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i> On-Site Material Haulage & Dumping</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i> Agricultural & Heavy Construction Logistics</li>
+            </ul>
+            <a href="tel:+919420382828" class="btn btn-warning fw-bold w-100 text-dark">Order Aggregate Transport</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Gallery Section -->
+  <section id="portfolio" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mx-auto mb-5">
+        <h6 class="text-warning fw-bold text-uppercase">Our Portfolio</h6>
+        <h2 class="fw-bold text-navy">Featured Construction Projects</h2>
+        <p class="text-muted">Take a look at our recent bungalow executions and site operations.</p>
+      </div>
+
+      <div class="row g-4">
         <div class="col-md-4">
-          <div class="portfolio-card position-relative overflow-hidden rounded-4 shadow-sm" style="height: 300px;">
-            <img src="assets/images/house.jpg" alt="Modern Bungalow Construction Project" class="w-100 h-100 object-fit-cover">
-            <div class="portfolio-overlay d-flex flex-column justify-content-end p-4 text-white">
+          <div class="portfolio-card shadow-sm">
+            <img src="images/house.jpg" alt="Modern Bungalow Construction">
+            <div class="portfolio-overlay">
               <span class="badge bg-warning text-dark w-auto align-self-start mb-2">Modern Villa</span>
               <h5 class="fw-bold mb-1">Hirodkar's Residence</h5>
-              <p class="fs-8 text-white-50 mb-0">3D Elevation & Construction Execution</p>
+              <p class="small text-white-50 mb-0">3D Elevation & Construction Execution</p>
             </div>
           </div>
         </div>
 
-        <!-- Item 2: Heavy Earthworks -->
         <div class="col-md-4">
-          <div class="portfolio-card position-relative overflow-hidden rounded-4 shadow-sm" style="height: 300px;">
-            <img src="assets/images/jcb.jpg" alt="JCB Site Clearing Operation" class="w-100 h-100 object-fit-cover">
-            <div class="portfolio-overlay d-flex flex-column justify-content-end p-4 text-white">
+          <div class="portfolio-card shadow-sm">
+            <img src="images/jcb.jpg" alt="JCB Site Clearing Operation">
+            <div class="portfolio-overlay">
               <span class="badge bg-warning text-dark w-auto align-self-start mb-2">Earthworks</span>
               <h5 class="fw-bold mb-1">Site Trenching & Clearing</h5>
-              <p class="fs-8 text-white-50 mb-0">JCB Machinery Operations</p>
+              <p class="small text-white-50 mb-0">JCB Machinery Operations</p>
             </div>
           </div>
         </div>
 
-        <!-- Item 3: Material Logistics -->
         <div class="col-md-4">
-          <div class="portfolio-card position-relative overflow-hidden rounded-4 shadow-sm" style="height: 300px;">
-            <img src="assets/images/tractor.jpg" alt="Material Supply Logistics" class="w-100 h-100 object-fit-cover">
-            <div class="portfolio-overlay d-flex flex-column justify-content-end p-4 text-white">
+          <div class="portfolio-card shadow-sm">
+            <img src="images/tractor.jpg" alt="Material Supply Logistics">
+            <div class="portfolio-overlay">
               <span class="badge bg-warning text-dark w-auto align-self-start mb-2">Logistics</span>
               <h5 class="fw-bold mb-1">Raw Material Transportation</h5>
-              <p class="fs-8 text-white-50 mb-0">Sand & Aggregate Delivery</p>
+              <p class="small text-white-50 mb-0">Sand & Aggregate Delivery</p>
             </div>
           </div>
         </div>
@@ -226,7 +328,7 @@
     </div>
   </section>
 
-  <!-- Contact & Location Section -->
+  <!-- Contact Us Section -->
   <section id="contact" class="py-5">
     <div class="container py-4">
       <div class="row g-5">
@@ -235,17 +337,17 @@
           <h2 class="fw-bold text-navy mb-4">Let's Discuss Your Dream Project</h2>
 
           <div class="d-flex align-items-start gap-3 mb-4">
-            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; min-width: 50px;">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
               <i class="fa-solid fa-location-dot fs-5"></i>
             </div>
             <div>
               <h6 class="fw-bold text-navy mb-1">Office Address</h6>
-              <p class="text-muted mb-0 fs-7">Plot.-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon, Maharashtra-425201</p>
+              <p class="text-muted mb-0 fs-7">Plot-20, Paresh Papad Samor, Chakradhar Nagar Bhusawal, Dist Jalgaon, Maharashtra - 425201</p>
             </div>
           </div>
 
           <div class="d-flex align-items-start gap-3 mb-4">
-            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; min-width: 50px;">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
               <i class="fa-solid fa-phone fs-5"></i>
             </div>
             <div>
@@ -256,23 +358,33 @@
               </p>
             </div>
           </div>
+
+          <div class="d-flex align-items-start gap-3 mb-4">
+            <div class="bg-warning bg-opacity-20 text-dark rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
+              <i class="fa-solid fa-clock fs-5"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold text-navy mb-1">Working Hours</h6>
+              <p class="text-muted mb-0 fs-7">Monday - Saturday: 9:00 AM - 8:00 PM</p>
+            </div>
+          </div>
         </div>
 
         <div class="col-lg-7">
           <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
             <h4 class="fw-bold text-navy mb-4">Send Us A Message</h4>
-            <form id="contactForm">
+            <form>
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label fw-medium text-navy">Your Name</label>
+                  <label class="form-label fw-medium text-navy fs-7">Your Name</label>
                   <input type="text" class="form-control form-control-lg fs-7" placeholder="e.g. Rahul Patil" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label fw-medium text-navy">Phone Number</label>
+                  <label class="form-label fw-medium text-navy fs-7">Phone Number</label>
                   <input type="tel" class="form-control form-control-lg fs-7" placeholder="e.g. 9823000000" required>
                 </div>
                 <div class="col-md-12">
-                  <label class="form-label fw-medium text-navy">Service Required</label>
+                  <label class="form-label fw-medium text-navy fs-7">Service Required</label>
                   <select class="form-select form-select-lg fs-7" required>
                     <option value="" selected disabled>Select a Service</option>
                     <option>Turnkey Bungalow Construction</option>
@@ -282,8 +394,8 @@
                   </select>
                 </div>
                 <div class="col-md-12">
-                  <label class="form-label fw-medium text-navy">Message Details</label>
-                  <textarea class="form-control form-control-lg fs-7" rows="4" placeholder="Tell us about your plot size, location, or requirements..." required></textarea>
+                  <label class="form-label fw-medium text-navy fs-7">Message Details</label>
+                  <textarea class="form-control form-control-lg fs-7" rows="4" placeholder="Tell us about your plot size, location, or requirements..."></textarea>
                 </div>
                 <div class="col-md-12">
                   <button type="submit" class="btn btn-warning btn-lg fw-bold w-100 text-dark">Submit Request</button>
@@ -296,6 +408,13 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-4 text-center border-top border-secondary">
+    <div class="container">
+      <p class="mb-0 fs-7 opacity-75">&copy; Jay Gurudev Enterprises & Construction. All Rights Reserved.</p>
+    </div>
+  </footer>
+
   <!-- Floating Contact Buttons -->
   <div class="quick-actions">
     <a href="https://wa.me/917798381919" target="_blank" class="btn-floating whatsapp" title="Chat on WhatsApp">
@@ -306,6 +425,7 @@
     </a>
   </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
