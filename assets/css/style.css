@@ -1,90 +1,120 @@
 /* ==========================================================================
-   Jay Gurudev Enterprises & Construction - Master Stylesheet
+   Global & Typography Styles
    ========================================================================== */
-
 :root {
-  --primary-navy: #0B1F3A;
-  --navy-light: #163259;
-  --secondary-gold: #F5A623;
-  --gold-hover: #D98E11;
-  --bg-light: #F8F9FA;
-  --text-dark: #222222;
+  --primary-navy: #0B1C33;
+  --secondary-navy: #152B48;
+  --accent-gold: #F5A623;
+  --accent-gold-hover: #D98E16;
+  --light-bg: #F8F9FA;
+  --text-dark: #212529;
   --text-muted: #6C757D;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-dark);
-  background-color: var(--bg-light);
+  background-color: #FFFFFF;
   overflow-x: hidden;
 }
 
-/* Typography Utilities */
 .text-navy { color: var(--primary-navy) !important; }
 .bg-navy { background-color: var(--primary-navy) !important; }
-.bg-navy-light { background-color: var(--navy-light) !important; }
-.text-gold { color: var(--secondary-gold) !important; }
-.btn-gold { 
-  background-color: var(--secondary-gold) !important; 
-  color: #000000 !important;
-  border: none;
-  transition: all 0.3s ease;
-}
-.btn-gold:hover {
-  background-color: var(--gold-hover) !important;
-  color: #FFFFFF !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
-}
+.bg-navy-light { background-color: var(--secondary-navy) !important; }
 
-.btn-navy {
-  background-color: var(--primary-navy) !important;
-  color: #FFFFFF !important;
-  border: none;
-  transition: all 0.3s ease;
-}
-.btn-navy:hover {
-  background-color: var(--navy-light) !important;
-  color: #FFFFFF !important;
-  transform: translateY(-2px);
-}
-
-.btn-outline-navy {
-  border: 2px solid var(--primary-navy);
-  color: var(--primary-navy);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.btn-outline-navy:hover, .btn-outline-navy.active {
-  background-color: var(--primary-navy);
-  color: #FFFFFF;
-}
-
-.fs-7 { font-size: 0.875rem; }
-.fs-8 { font-size: 0.75rem; }
+.fs-7 { font-size: 0.875rem !important; }
+.fs-8 { font-size: 0.775rem !important; }
 .letter-spacing-1 { letter-spacing: 1px; }
 .max-w-700 { max-width: 700px; }
 
-/* Hero Section */
-.hero-section {
-  min-height: 88vh;
-  background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, rgba(11, 31, 58, 0.92) 0%, rgba(11, 31, 58, 0.7) 100%);
+/* ==========================================================================
+   Floating Action Buttons & Top Bar
+   ========================================================================== */
+.quick-actions {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Service & Portfolio Cards */
+.btn-floating {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-floating:hover {
+  transform: translateY(-3px);
+  color: #FFF;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.btn-floating.whatsapp { background-color: #25D366; }
+.btn-floating.phone { background-color: var(--primary-navy); }
+
+/* Buttons */
+.btn-gold {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #000 !important;
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+}
+
+.btn-navy {
+  background-color: var(--primary-navy);
+  color: #FFF !important;
+}
+
+.btn-navy:hover {
+  background-color: var(--secondary-navy);
+}
+
+/* ==========================================================================
+   Hero Section (Fixes White Gap at Top)
+   ========================================================================== */
+.hero-section {
+  min-height: 90vh;
+  background: url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(11, 28, 51, 0.92) 0%, rgba(11, 28, 51, 0.75) 100%);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Cards & Layout Components
+   ========================================================================== */
 .service-card {
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(11, 31, 58, 0.12) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08) !important;
 }
+
 .icon-wrapper {
   width: 60px;
   height: 60px;
@@ -93,75 +123,54 @@ body {
 .portfolio-card {
   height: 280px;
 }
+
 .portfolio-card img {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+
 .portfolio-card:hover img {
   transform: scale(1.08);
 }
+
 .portfolio-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(11, 31, 58, 0.9) 0%, rgba(11, 31, 58, 0.1) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(11, 28, 51, 0.95) 0%, rgba(11, 28, 51, 0.2) 100%);
   opacity: 0.9;
   transition: opacity 0.3s ease;
 }
 
-/* Process Steps */
-.step-number {
+.process-step .step-number {
   width: 45px;
   height: 45px;
   line-height: 45px;
   font-size: 1.2rem;
 }
 
-/* Quick Action Floating Buttons */
-.quick-actions {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.btn-floating {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-  text-decoration: none;
-}
-.btn-floating:hover {
-  transform: scale(1.1);
-  color: #FFFFFF;
-}
-.btn-floating.whatsapp { background-color: #25D366; }
-.btn-floating.phone { background-color: var(--primary-navy); }
-
 .social-icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
+
 .social-icon:hover {
-  background-color: var(--secondary-gold) !important;
-  color: #000000 !important;
+  background-color: var(--accent-gold) !important;
+  color: #000 !important;
 }
 
-/* Responsive Tweaks */
-@media (max-width: 767.98px) {
-  .hero-section { min-height: 75vh; }
-  .display-4 { font-size: 2.2rem; }
+/* ==========================================================================
+   AOS Fallback (Ensures text remains visible if script fails)
+   ========================================================================== */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
 }
