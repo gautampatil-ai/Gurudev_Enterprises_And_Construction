@@ -84,6 +84,35 @@
     .btn-floating:hover { transform: scale(1.1); color: white; }
     .btn-floating.whatsapp { background-color: #25D366; }
     .btn-floating.phone { background-color: #0d1b2a; }
+
+    /* --- Interactive Rating Widget Styles --- */
+    .rating-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border: 1px solid #e9ecef;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .star-rating span {
+      font-size: 32px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s ease-in-out;
+      padding: 0 4px;
+    }
+    .star-rating span.active,
+    .star-rating span:hover {
+      color: #ffc107; /* Bootstrap warning gold */
+    }
+    .rating-status {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ffc107;
+      margin: 8px 0;
+      min-height: 22px;
+    }
   </style>
 </head>
 <body>
@@ -371,6 +400,7 @@
         </div>
 
         <div class="col-lg-7">
+          <!-- Main Form Card -->
           <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
             <h4 class="fw-bold text-navy mb-4">Send Us A Message</h4>
             <form>
@@ -403,6 +433,23 @@
               </div>
             </form>
           </div>
+
+          <!-- RATING WIDGET ADDED HERE -->
+          <div class="rating-card">
+            <h5 class="fw-bold text-navy mb-2">Rate Your Experience</h5>
+            <p class="text-muted fs-7 mb-2">How satisfied are you with our website/services?</p>
+            <div class="star-rating" id="starContainer">
+              <span data-star="1" onclick="selectStar(1)">★</span>
+              <span data-star="2" onclick="selectStar(2)">★</span>
+              <span data-star="3" onclick="selectStar(3)">★</span>
+              <span data-star="4" onclick="selectStar(4)">★</span>
+              <span data-star="5" onclick="selectStar(5)">★</span>
+            </div>
+            <p id="ratingStatus" class="rating-status"></p>
+            <textarea id="ratingFeedback" class="form-control fs-7 mb-3" rows="2" placeholder="Optional feedback or suggestions..."></textarea>
+            <button id="submitRatingBtn" class="btn btn-navy bg-navy text-white fw-bold px-4 rounded-3" onclick="sendRating()">Submit Rating</button>
+          </div>
+
         </div>
       </div>
     </div>
@@ -427,5 +474,44 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Rating Widget JS -->
+  <script>
+    let currentRating = 0;
+
+    function selectStar(rating) {
+      currentRating = rating;
+      const stars = document.querySelectorAll('#starContainer span');
+      
+      stars.forEach((star) => {
+        const starVal = parseInt(star.getAttribute('data-star'));
+        if (starVal <= rating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+
+      const statusText = document.getElementById('ratingStatus');
+      const labels = ["Poor", "Fair", "Good", "Very Good", "Excellent!"];
+      statusText.innerText = labels[rating - 1];
+    }
+
+    function sendRating() {
+      const feedback = document.getElementById('ratingFeedback').value;
+
+      if (currentRating === 0) {
+        alert("Please select a star rating first!");
+        return;
+      }
+
+      alert(`Thank you for rating us ${currentRating} stars!`);
+
+      // Clear input fields
+      selectStar(0);
+      document.getElementById('ratingFeedback').value = '';
+      document.getElementById('ratingStatus').innerText = '';
+    }
+  </script>
 </body>
 </html>
