@@ -75,3 +75,37 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCount();
   });
 });
+let currentRating = 0;
+
+// Star selection function
+function selectStar(rating) {
+  currentRating = rating;
+  const stars = document.querySelectorAll('#starContainer span');
+  
+  stars.forEach((star) => {
+    const starVal = parseInt(star.getAttribute('data-star'));
+    star.classList.toggle('active', starVal <= rating);
+  });
+
+  const statusText = document.getElementById('ratingStatus');
+  const labels = ["Poor", "Fair", "Good", "Very Good", "Excellent!"];
+  statusText.innerText = labels[rating - 1];
+}
+
+// Submit button function
+function sendRating() {
+  const feedback = document.getElementById('ratingFeedback').value;
+
+  if (currentRating === 0) {
+    alert("Please select a star rating first!");
+    return;
+  }
+
+  // Display thank you message to user
+  alert(`Thank you for rating us ${currentRating} stars!`);
+
+  // Reset form
+  selectStar(0);
+  document.getElementById('ratingFeedback').value = '';
+  document.getElementById('ratingStatus').innerText = '';
+}
